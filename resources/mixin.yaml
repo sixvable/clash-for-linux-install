@@ -608,7 +608,7 @@ proxy-groups:
         - AllServer
     - name: Apple Intelligence
       type: select
-      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Siri.png
+      icon: https://cdn.jsdelivr.net/gh/sixvable/clash-for-linux-install@master/resources/apple-intelligence-seeklogo.png
       proxies:
         - DIRECT
         - Proxy
