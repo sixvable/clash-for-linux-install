@@ -205,46 +205,37 @@ _merge_config() {
       
       ########################################
       #               Rules                  #
+      # override 有内容时全量替换，否则保留   #
+      # prefix + 订阅原始 rules + suffix      #
+      # 写法：override // ($config.xxx // []) #
+      # 兼容较旧的 yq（无需 if/then/else）   #
       ########################################
       .rules = (
         ($mixin.rules.prefix // []) +
-        ($config.rules // []) +
+        ($mixin.rules.override // ($config.rules // [])) +
         ($mixin.rules.suffix // [])
       ) |
       
       ########################################
       #                Proxies               #
+      # override 有内容时全量替换，否则保留   #
+      # prefix + 订阅原始 proxies + suffix    #
       ########################################
       .proxies = (
         ($mixin.proxies.prefix // []) +
-        (
-          ($config.proxies // []) as $configList |
-          ($mixin.proxies.override // []) as $overrideList |
-          $configList | map(
-            . as $configItem |
-            (
-              $overrideList[] | select(.name == $configItem.name)
-            ) // $configItem
-          )
-        ) +
+        ($mixin.proxies.override // ($config.proxies // [])) +
         ($mixin.proxies.suffix // [])
       ) |
       
       ########################################
       #             ProxyGroups              #
+      # override 有内容时全量替换，否则保留   #
+      # prefix + 订阅原始 proxy-groups +     #
+      # suffix                               #
       ########################################
       .proxy-groups = (
         ($mixin.proxy-groups.prefix // []) +
-        (
-          ($config.proxy-groups // []) as $configList |
-          ($mixin.proxy-groups.override // []) as $overrideList |
-          $configList | map(
-            . as $configItem |
-            (
-              $overrideList[] | select(.name == $configItem.name)
-            ) // $configItem
-          )
-        ) +
+        ($mixin.proxy-groups.override // ($config.proxy-groups // [])) +
         ($mixin.proxy-groups.suffix // [])
       ) |
 
