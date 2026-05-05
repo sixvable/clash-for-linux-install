@@ -64,6 +64,7 @@ _prepare_zip() {
     esac
     [ ! -f "$ZIP_YQ" ] && required_zips+=("yq")
     [ ! -f "$ZIP_SUBCONVERTER" ] && required_zips+=("subconverter")
+    required_zips+=("zashboard")
 
     _download_zip "${required_zips[@]}"
 
@@ -124,11 +125,13 @@ _download_zip() {
         ;;
     esac
 
+    local url_zashboard=https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
     local -A urls=(
         [clash]="$url_clash"
         [mihomo]="$url_mihomo"
         [yq]="$url_yq"
         [subconverter]="$url_subconverter"
+        [zashboard]="$url_zashboard"
     )
 
     local item target_zips=()
