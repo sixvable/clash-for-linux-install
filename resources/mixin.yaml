@@ -903,7 +903,7 @@ tun:
     - 127.0.0.1/32
   exclude-interface:
     - docker0 # 避免无法访问容器内服务
-    - podman0 # 详见：https://github.com/nelvko/clash-for-linux-install/issues/100#issuecomment-2995667368
+    - podman0 # 详见：https://github.com/sixvable/clash-for-linux-install/issues/100#issuecomment-2995667368
 
 # DNS 配置
 dns:
