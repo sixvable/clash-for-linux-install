@@ -356,36 +356,36 @@ proxy-groups:
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
       proxies:
+        - DIRECT
         - Proxy
         - AllServer
-        - DIRECT
     - name: Proxy
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Rocket.png
       proxies:
+        - DIRECT
         - HongKong
         - TaiWan
         - Japan
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: AdBlock
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png
       proxies:
-        - REJECT
         - DIRECT
+        - REJECT
     # ---------- 代理策略组 ----------
     - name: AI
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
       proxies:
+        - Singapore
         - Proxy
         - HongKong
         - TaiWan
         - Japan
-        - Singapore
         - America
         - AllServer
         - DIRECT
@@ -393,6 +393,7 @@ proxy-groups:
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -400,11 +401,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: NETFLIX
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -412,11 +413,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Disney+
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -424,11 +425,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: HBO
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -436,11 +437,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: PrimeVideo
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -448,11 +449,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Spotify
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -460,11 +461,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: TikTok
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -472,11 +473,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Emby
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -484,11 +485,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Bahamut
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
       proxies:
+        - DIRECT
         - TaiWan
         - Proxy
         - HongKong
@@ -496,11 +497,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: BiliBiliIntl
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -508,11 +509,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Streaming
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -520,11 +521,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Telegram
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram_X.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -532,11 +533,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: GitHub
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -544,11 +545,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Google
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -556,11 +557,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: X
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -568,11 +569,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: PayPal
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -580,11 +581,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Games
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -592,7 +593,6 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     # ---------- 直连优先策略组 ----------
     - name: Scholar_NoCN
       type: select
@@ -742,8 +742,8 @@ proxy-groups:
       include-all: true
       filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
       proxies:
-        - All-Auto
         - DIRECT
+        - All-Auto
     # ---------- 隐藏自动测速组 ----------
     - name: HK-Auto
       type: url-test
