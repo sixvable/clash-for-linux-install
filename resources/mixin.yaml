@@ -46,6 +46,13 @@ allow-lan: false # 若开启务必设置用户验证以防暴露公网后被滥�
 # rule-providers：远程规则集（按需启用，与 rules.override 配合使用）
 # ============================================================
 rule-providers:
+  LAN:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Lan.list
+    path: ./Rules/Lan.list
   Direct:
     type: http
     behavior: classical
@@ -67,6 +74,20 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/AI.list
     path: ./Rules/AI.list
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Apple.list
+    path: ./Rules/Apple.list
+  OneDrive:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/OneDrive.list
+    path: ./Rules/OneDrive.list
   YouTube:
     type: http
     behavior: classical
@@ -88,13 +109,27 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Disney.list
     path: ./Rules/Disney.list
-  Emby:
+  HBO:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Emby.list
-    path: ./Rules/Emby.list
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/HBO.list
+    path: ./Rules/HBO.list
+  PrimeVideo:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/PrimeVideo.list
+    path: ./Rules/PrimeVideo.list
+  Spotify:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Spotify.list
+    path: ./Rules/Spotify.list
   TikTok:
     type: http
     behavior: classical
@@ -102,6 +137,13 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/TikTok.list
     path: ./Rules/TikTok.list
+  Emby:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Emby.list
+    path: ./Rules/Emby.list
   Bahamut:
     type: http
     behavior: classical
@@ -109,7 +151,7 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Bahamut.list
     path: ./Rules/Bahamut.list
-  BiliIntl:
+  BiliBiliIntl:
     type: http
     behavior: classical
     format: text
@@ -123,13 +165,6 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/bilibili.list
     path: ./Rules/bilibili.list
-  Spotify:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Spotify.list
-    path: ./Rules/Spotify.list
   NetEaseMusic:
     type: http
     behavior: classical
@@ -137,13 +172,6 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/NetEaseMusic.list
     path: ./Rules/NetEaseMusic.list
-  ProxyMedia:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/ProxyMedia.list
-    path: ./Rules/ProxyMedia.list
   WeChat:
     type: http
     behavior: classical
@@ -165,13 +193,6 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Github.list
     path: ./Rules/Github.list
-  Twitter:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Twitter.list
-    path: ./Rules/Twitter.list
   Google:
     type: http
     behavior: classical
@@ -179,6 +200,34 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Google.list
     path: ./Rules/Google.list
+  Twitter:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Twitter.list
+    path: ./Rules/Twitter.list
+  PayPal:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/PayPal.list
+    path: ./Rules/PayPal.list
+  Game:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Game.list
+    path: ./Rules/Game.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/ProxyMedia.list
+    path: ./Rules/ProxyMedia.list
   Microsoft:
     type: http
     behavior: classical
@@ -186,13 +235,13 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Microsoft.list
     path: ./Rules/Microsoft.list
-  Games:
+  Proxy:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Game.list
-    path: ./Rules/Game.list
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Proxy.list
+    path: ./Rules/Proxy.list
   ProxyGFW:
     type: http
     behavior: classical
@@ -200,34 +249,20 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/ProxyGFW.list
     path: ./Rules/ProxyGFW.list
-  AppleCN:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/AppleCN.list
-    path: ./Rules/AppleCN.list
-  AppleServers:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/AppleServers.list
-    path: ./Rules/AppleServers.list
-  CN_Mainland:
+  ChinaDomain:
     type: http
     behavior: classical
     format: text
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/ChinaDomain.list
     path: ./Rules/ChinaDomain.list
-  LAN:
+  ChinaIP:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/Lan.list
-    path: ./Rules/Lan.list
+    url: https://cdn.jsdelivr.net/gh/Coldvvater/Mononoke@master/mihomo/Rules/ChinaIP.list
+    path: ./Rules/ChinaIP.list
 
 # ============================================================
 # rules：路由规则
@@ -242,32 +277,57 @@ rules:
   # 启用下方 override 后，订阅原始规则将被完全忽略
   override:
     - DOMAIN,api64.ipify.org,DIRECT # 用于 clashui 获取真实公网 IP
+    - RULE-SET,LAN,DIRECT
     - RULE-SET,Direct,DIRECT
-    - RULE-SET,Reject,REJECT
+    - RULE-SET,Reject,AdBlock
+    - GEOSITE,category-scholar-cn,DIRECT
+    - GEOSITE,category-scholar-!cn,Scholar_NoCN
+    - GEOSITE,apple-intelligence,Apple Intelligence
+    - DOMAIN,guzzoni.apple.com,Apple Intelligence
+    - DOMAIN-SUFFIX,smoot.apple.com,Apple Intelligence
+    - DOMAIN,cp4.cloudflare.com,Apple Intelligence
     - RULE-SET,AI,AI
+    - RULE-SET,Apple,Apple
+    - RULE-SET,OneDrive,OneDrive
+    - DOMAIN-SUFFIX,wns.windows.com,OneDrive
+    - DOMAIN,officeclient.microsoft.com,OneDrive
+    - DOMAIN,g.live.com,OneDrive
+    - DOMAIN-SUFFIX,svc.ms,OneDrive
+    - DOMAIN-SUFFIX,officeapps.live.com,OneDrive
+    - DOMAIN-SUFFIX,online.office.com,OneDrive
+    - DOMAIN,office.live.com,OneDrive
+    - DOMAIN-SUFFIX,office.net,OneDrive
+    - DOMAIN,apis.live.net,OneDrive
+    - DOMAIN-SUFFIX,events.data.microsoft.com,OneDrive
+    - DOMAIN-SUFFIX,aria.microsoft.com,OneDrive
+    - DOMAIN-SUFFIX,officecdn.microsoft.com,OneDrive
+    - DOMAIN-SUFFIX,officecdn.microsoft.com.edgesuite.net,OneDrive
+    - DOMAIN-SUFFIX,msocdn.com,OneDrive
     - RULE-SET,YouTube,YouTube
     - RULE-SET,Netflix,NETFLIX
     - RULE-SET,Disney,Disney+
-    - RULE-SET,Emby,Emby
-    - RULE-SET,TikTok,TikTok
-    - RULE-SET,Bahamut,TaiWan
-    - RULE-SET,BiliIntl,Streaming
-    - RULE-SET,bilibili,bilibili
+    - RULE-SET,HBO,HBO
+    - RULE-SET,PrimeVideo,PrimeVideo
     - RULE-SET,Spotify,Spotify
+    - RULE-SET,TikTok,TikTok
+    - RULE-SET,Emby,Emby
+    - RULE-SET,Bahamut,Bahamut
+    - RULE-SET,BiliBiliIntl,BiliBiliIntl
+    - RULE-SET,bilibili,bilibili
     - RULE-SET,NetEaseMusic,NetEaseMusic
-    - RULE-SET,ProxyMedia,Streaming
-    - RULE-SET,WeChat,DIRECT
+    - RULE-SET,WeChat,WeChat
     - RULE-SET,Telegram,Telegram
-    - RULE-SET,GitHub,Proxy
-    - RULE-SET,Twitter,X
+    - RULE-SET,GitHub,GitHub
     - RULE-SET,Google,Google
+    - RULE-SET,Twitter,X
+    - RULE-SET,PayPal,PayPal
+    - RULE-SET,Game,Games
+    - RULE-SET,ProxyMedia,Streaming
     - RULE-SET,Microsoft,Microsoft
-    - RULE-SET,Games,Games
+    - RULE-SET,Proxy,Proxy
     - RULE-SET,ProxyGFW,Proxy
-    - RULE-SET,AppleCN,Apple
-    - RULE-SET,AppleServers,Proxy
-    - RULE-SET,CN_Mainland,DIRECT
-    - RULE-SET,LAN,DIRECT
+    - RULE-SET,ChinaDomain,DIRECT
+    - RULE-SET,ChinaIP,DIRECT
     - GEOIP,CN,DIRECT
     - MATCH,Final
 
@@ -291,11 +351,13 @@ proxy-groups:
   suffix:
   # 启用下方 override 后，订阅原始策略组将被完全忽略
   override:
+    # ---------- 顶层策略组 ----------
     - name: Final
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
       proxies:
         - Proxy
+        - AllServer
         - DIRECT
     - name: Proxy
       type: select
@@ -308,6 +370,13 @@ proxy-groups:
         - America
         - AllServer
         - DIRECT
+    - name: AdBlock
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png
+      proxies:
+        - REJECT
+        - DIRECT
+    # ---------- 代理策略组 ----------
     - name: AI
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
@@ -319,6 +388,7 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
+        - DIRECT
     - name: YouTube
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
@@ -330,6 +400,7 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
+        - DIRECT
     - name: NETFLIX
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
@@ -341,6 +412,7 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
+        - DIRECT
     - name: Disney+
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png
@@ -352,9 +424,34 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-    - name: Emby
+        - DIRECT
+    - name: HBO
       type: select
-      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO.png
+      proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
+    - name: PrimeVideo
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png
+      proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
+    - name: Spotify
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
       proxies:
         - Proxy
         - HongKong
@@ -375,16 +472,10 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-    - name: bilibili
-      type: select
-      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png
-      proxies:
         - DIRECT
-        - HongKong
-        - TaiWan
-    - name: Spotify
+    - name: Emby
       type: select
-      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png
       proxies:
         - Proxy
         - HongKong
@@ -394,10 +485,29 @@ proxy-groups:
         - America
         - AllServer
         - DIRECT
-    - name: NetEaseMusic
+    - name: Bahamut
       type: select
-      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netease_Music.png
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
       proxies:
+        - TaiWan
+        - Proxy
+        - HongKong
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
+    - name: BiliBiliIntl
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png
+      proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
         - DIRECT
     - name: Streaming
       type: select
@@ -410,6 +520,7 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
+        - DIRECT
     - name: Telegram
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram_X.png
@@ -421,10 +532,85 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
+        - DIRECT
+    - name: GitHub
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+      proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
+    - name: Google
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+      proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
     - name: X
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png
       proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
+    - name: PayPal
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png
+      proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
+    - name: Games
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+      proxies:
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+        - DIRECT
+    # ---------- 直连优先策略组 ----------
+    - name: Scholar_NoCN
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bookpedia.png
+      proxies:
+        - DIRECT
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+    - name: Apple Intelligence
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Siri.png
+      proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -444,10 +630,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-    - name: Google
+    - name: OneDrive
       type: select
-      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -455,7 +642,6 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-        - DIRECT
     - name: Microsoft
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png
@@ -468,10 +654,11 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
-    - name: Games
+    - name: bilibili
       type: select
-      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png
       proxies:
+        - DIRECT
         - Proxy
         - HongKong
         - TaiWan
@@ -479,7 +666,31 @@ proxy-groups:
         - Singapore
         - America
         - AllServer
+    - name: NetEaseMusic
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netease_Music.png
+      proxies:
         - DIRECT
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+    - name: WeChat
+      type: select
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/WeChat.png
+      proxies:
+        - DIRECT
+        - Proxy
+        - HongKong
+        - TaiWan
+        - Japan
+        - Singapore
+        - America
+        - AllServer
+    # ---------- 地区策略组 ----------
     - name: HongKong
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
@@ -520,7 +731,7 @@ proxy-groups:
       type: select
       icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
       include-all: true
-      filter: 美|🇺🇸|🇺🇲|US|(?i)States|American
+      filter: 美|🇺🇲|US|(?i)States|American
       proxies:
         - US-Auto
         - US-FallBack
@@ -532,6 +743,8 @@ proxy-groups:
       filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
       proxies:
         - All-Auto
+        - DIRECT
+    # ---------- 隐藏自动测速组 ----------
     - name: HK-Auto
       type: url-test
       hidden: true
@@ -568,7 +781,7 @@ proxy-groups:
       type: url-test
       hidden: true
       include-all: true
-      filter: 美|🇺🇸|🇺🇲|US|(?i)States|American
+      filter: 美|🇺🇲|US|(?i)States|American
       url: http://www.gstatic.com/generate_204
       interval: 300
       lazy: true
@@ -580,6 +793,7 @@ proxy-groups:
       url: http://www.gstatic.com/generate_204
       interval: 300
       lazy: true
+    # ---------- 隐藏故障转移组 ----------
     - name: HK-FallBack
       type: fallback
       hidden: true
@@ -616,10 +830,11 @@ proxy-groups:
       type: fallback
       hidden: true
       include-all: true
-      filter: 美|🇺🇸|🇺🇲|US|(?i)States|American
+      filter: 美|🇺🇲|US|(?i)States|American
       url: http://www.gstatic.com/generate_204
       interval: 300
       lazy: true
+    # ---------- 隐藏负载均衡组 ----------
     - name: HK-LoadBalance
       type: load-balance
       hidden: true
@@ -660,7 +875,7 @@ proxy-groups:
       type: load-balance
       hidden: true
       include-all: true
-      filter: 美|🇺🇸|🇺🇲|US|(?i)States|American
+      filter: 美|🇺🇲|US|(?i)States|American
       strategy: consistent-hashing
       url: http://www.gstatic.com/generate_204
       interval: 300
