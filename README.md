@@ -20,12 +20,13 @@
 在终端中执行以下命令即可完成安装：
 
 ```bash
-git clone --branch master --depth 1 https://gh-proxy.org/https://github.com/nelvko/clash-for-linux-install.git \
+git clone --branch master --depth 1 https://ghfast.top/https://github.com/nelvko/clash-for-linux-install.git \
   && cd clash-for-linux-install \
   && bash install.sh
 ```
 
-- 上述命令使用了[加速前缀](https://gh-proxy.org/)，如失效可更换其他[可用链接](https://ghproxy.link/)。
+- 上述命令使用了 [ghfast.top](https://ghfast.top/) 加速镜像，如失效可更换其他[可用链接](https://ghproxy.link/)。
+- 脚本中所有 GitHub 资源（内核、UI、依赖等）均通过 `.env` 中的 `URL_GH_PROXY` 进行加速，默认已配置为 `https://ghfast.top`。
 - 可通过 `.env` 文件或脚本参数自定义安装选项。
 - 没有订阅？[click me](https://次元.net/auth/register?code=oUbI)
 
@@ -109,6 +110,43 @@ $ clashmixin -r
 
 - 通过 `Mixin` 自定义的配置内容会与原始订阅进行深度合并，且 `Mixin` 具有最高优先级，最终生成内核启动时加载的运行时配置。
 - `Mixin` 支持以前置、后置或覆盖的方式，对原始订阅中的规则、节点及策略组进行新增或修改。
+
+### 自定义全覆盖配置（override 用法）
+
+`rules`、`proxies`、`proxy-groups` 均支持 `override` 字段：
+
+- **`override` 非空**：直接用 override 内容**全量替换**订阅原始内容（忽略机场自带的同类字段）。
+- **`override` 为空**：自动回退到 `prefix + 订阅原始内容 + suffix`，行为与旧版一致。
+
+```yaml
+# mixin.yaml 示例：用 override 接管全部路由规则和策略组
+
+rules:
+  override:
+    - RULE-SET,Direct,DIRECT
+    - RULE-SET,AI,AI
+    - GEOIP,CN,DIRECT
+    - MATCH,Final          # 末尾兜底，不再使用订阅自带规则
+
+proxy-groups:
+  override:
+    - name: Final
+      type: select
+      proxies: [Proxy, DIRECT]
+    - name: Proxy
+      type: select
+      proxies: [HongKong, America, DIRECT]
+    - name: HongKong
+      type: url-test
+      include-all: true
+      filter: 港|HK|(?i)Hong
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+```
+
+> **说明**：`prefix` / `suffix` 无论 `override` 是否有值，均正常拼接在两端；`inject` 与 `override` 互不干扰，用于向已有策略组追加节点。
+
+默认的 `resources/mixin.yaml` 已内置完整的 override 示例（含 rule-providers、分区策略组），可直接参考修改。
 
 ### 升级内核
 ```bash
